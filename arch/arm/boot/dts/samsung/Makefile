@@ -1,115 +1,250 @@
-ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
-dtbo-$(CONFIG_ARCH_ZQL1695) += samsung-sdm439-qrd-r00-default-overlay.dtbo \
-	samsung-sdm439-qrd-r01-overlay.dtbo \
-	samsung-sdm439-qrd-r02-overlay.dtbo \
-	samsung-sdm439-qrd-r03-overlay.dtbo \
-	samsung-sdm439-qrd-r04-overlay.dtbo \
-	samsung-sdm439-qrd-r05-overlay.dtbo \
-	samsung-sdm439-qrd-r06-overlay.dtbo \
-	samsung-sdm439-qrd-r07-overlay.dtbo \
-	samsung-sdm439-qrd-r08-overlay.dtbo \
-	samsung-sdm439-qrd-r09-overlay.dtbo
+ifeq ($(CONFIG_OF),y)
 
-samsung-sdm439-qrd-r01-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r02-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r03-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r04-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r05-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r06-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r07-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r08-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-samsung-sdm439-qrd-r09-overlay.dtbo-base := sdm439.dtb \
-	msm8937-interposer-sdm439.dtb
-
-# HS70 code added by tangqingyong for HS70-9 at 20191002 start
-# HS70 code added by tangqingyong for HS70-11 at 20191003 start
-dtbo-$(CONFIG_ARCH_ZQL1871) += samsung-sdm450-qrd-r00-default-overlay.dtbo \
-	samsung-sdm450-qrd-r01-overlay.dtbo \
-	samsung-sdm450-qrd-r02-overlay.dtbo \
-	samsung-sdm450-qrd-r03-overlay.dtbo \
-	samsung-sdm450-qrd-r04-overlay.dtbo \
-	samsung-sdm450-qrd-r05-overlay.dtbo \
-	samsung-sdm450-qrd-r06-overlay.dtbo \
-	samsung-sdm450-qrd-r07-overlay.dtbo \
-	samsung-sdm450-qrd-r08-overlay.dtbo \
-	samsung-sdm450-qrd-r09-overlay.dtbo
-
-samsung-sdm450-qrd-r00-default-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r01-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r02-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r03-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r04-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r05-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r06-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r07-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r08-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-samsung-sdm450-qrd-r09-overlay.dtbo-base := sdm450.dtb \
-	sdm450-pmi632.dtb \
-	msm8953.dtb
-# HS70 code added by tangqingyong for HS70-11 at 20191003 end
-# HS70 code added by tangqingyong for HS70-9 at 20191002 end
-else
-#dtb-$(CONFIG_ARCH_MSM8937) += msm8937-pmi8950-mtp.dtb \
-	msm8937-interposer-sdm439-cdp.dtb \
-	msm8937-interposer-sdm439-mtp.dtb \
-	msm8937-interposer-sdm439-qrd.dtb \
-	msm8937-interposer-sdm429-cdp.dtb \
-	msm8937-interposer-sdm429-mtp.dtb
-
-dtb-$(CONFIG_ARCH_MSM8917) += msm8917-sec-j4primelte-sea-open-r01.dtb \
-        msm8917-sec-j4primelte-sea-open-r00.dtb \
-        msm8917-sec-j4primelte-sea-open-r02.dtb \
-        msm8917-sec-j4primelte-sea-open-r03.dtb \
-        msm8917-sec-j4primelte-sea-open-r04.dtb \
-        msm8917-sec-j4primelte-sea-open-r06.dtb
-
-#dtb-$(CONFIG_ARCH_SDM439) += sdm439-mtp.dtb \
-	sdm439-cdp.dtb \
-	sdm439-qrd.dtb \
-	sda439-mtp.dtb \
-	sda439-cdp.dtb \
-	sdm439-external-codec-mtp.dtb \
-	sdm439-rcm.dtb \
-	qm215-qrd.dtb \
-	qm215-qrd-smb1360.dtb
-
-#dtb-$(CONFIG_ARCH_SDM429) += sdm429-mtp.dtb \
-	sdm429-cdp.dtb \
-	sdm429-qrd.dtb \
-	sda429-mtp.dtb \
-	sda429-cdp.dtb \
-	sdm429-qrd-spyro-evt.dtb
-
+ifeq ($(CONFIG_SEC_ON5QLTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_ON5QLTE_CHN_OPEN),y)
+                dtb-y += msm8917-sec-on5qlte-chn-r00.dtb
+		dtb-y += msm8917-sec-on5qlte-chn-r01.dtb
+        endif
 endif
 
-dtb-$(CONFIG_ARCH_SDM845_VM) += sdm845-vm.dtb
+ifeq ($(CONFIG_SEC_ELITELTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_ELITELTE_CHN_OPEN),y)
+                dtb-y += msm8917-sec-elitelte-chn-r00.dtb
+		dtb-y += msm8917-sec-elitelte-chn-r01.dtb
+		dtb-y += msm8917-sec-elitelte-chn-r02.dtb
+		dtb-y += msm8917-sec-elitelte-chn-r03.dtb
+        endif
+endif
 
-always		:= $(dtb-y)
-subdir-y	:= $(dts-dirs)
-clean-files	:= *.dtb
+ifeq ($(CONFIG_SEC_ELITEXLTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_ELITEXLTE_CHN_OPEN),y)
+                dtb-y += msm8917-sec-elitexlte-chn-r00.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J3LLTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J3LLTE_USA_SPR),y)
+                dtb-y += msm8917-sec-j3llte-usa-spr-r00.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J3POPLTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J3POPLTE_USA_SPR),y)
+                dtb-y += msm8917-sec-j3poplte-usa-spr-r00.dtb
+                dtb-y += msm8917-sec-j3poplte-usa-spr-r01.dtb
+                dtb-y += msm8917-sec-j3poplte-usa-spr-r03.dtb
+        endif
+
+        ifeq ($(CONFIG_MACH_J3POPLTE_USA_USC),y)
+                dtb-y += msm8917-sec-j3poplte-usa-usc-r05.dtb
+                dtb-y += msm8917-sec-j3poplte-usa-usc-r06.dtb
+        endif
+
+        ifeq ($(CONFIG_MACH_J3POPLTE_USA_VZW),y)
+                dtb-y += msm8917-sec-j3poplte-usa-vzw-r06.dtb
+        endif
+
+        ifeq ($(CONFIG_MACH_J3POPLTE_USA_ACG),y)
+                dtb-y += msm8917-sec-j3poplte-usa-acg-r06.dtb
+        endif
+
+        ifeq ($(CONFIG_MACH_J3POPLTE_USA_LRA),y)
+                dtb-y += msm8917-sec-j3poplte-usa-lra-r06.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J1Y17LTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J1Y17LTE_EUR_OPEN),y)
+                dtb-y += msm8917-sec-j1y17lte-eur-open-r00.dtb
+                dtb-y += msm8917-sec-j1y17lte-eur-open-r01.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J2Y18LTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J2Y18LTE_MEA_OPEN),y)
+                dtb-y += msm8917-sec-j2y18lte-mea-open-r00.dtb
+                dtb-y += msm8917-sec-j2y18lte-mea-open-r01.dtb
+				dtb-y += msm8917-sec-j2y18lte-mea-open-r02.dtb
+				dtb-y += msm8917-sec-j2y18lte-mea-open-r03.dtb
+				dtb-y += msm8917-sec-j2y18lte-mea-open-r04.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J5Y18LTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J5Y18LTE_SWA_OPEN),y)
+                dtb-y += msm8917-sec-j5y18lte-swa-open-r00.dtb
+                dtb-y += msm8917-sec-j5y18lte-swa-open-r01.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J6PRIMELTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J6PRIMELTE_SWA_OPEN),y)
+                dtb-y += msm8917-sec-j6primelte-swa-open-r00.dtb
+                dtb-y += msm8917-sec-j6primelte-swa-open-r01.dtb
+                dtb-y += msm8917-sec-j6primelte-swa-open-r02.dtb
+                dtb-y += msm8917-sec-j6primelte-swa-open-r03.dtb
+                dtb-y += msm8917-sec-j6primelte-swa-open-r04.dtb
+                dtb-y += msm8917-sec-j6primelte-swa-open-r05.dtb
+                dtb-y += msm8917-sec-j6primelte-swa-open-r06.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J4PRIMELTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J4PRIMELTE_SEA_OPEN),y)
+                dtb-y += msm8917-sec-j4primelte-sea-open-r00.dtb
+                dtb-y += msm8917-sec-j4primelte-sea-open-r01.dtb
+                dtb-y += msm8917-sec-j4primelte-sea-open-r02.dtb
+                dtb-y += msm8917-sec-j4primelte-sea-open-r03.dtb
+                dtb-y += msm8917-sec-j4primelte-sea-open-r04.dtb
+                dtb-y += msm8917-sec-j4primelte-sea-open-r06.dtb
+        endif
+        ifeq ($(CONFIG_MACH_J4PRIMELTE_KOR_OPEN),y)
+                dtb-y += msm8917-sec-j4primelte-kor-open-r00.dtb
+                dtb-y += msm8917-sec-j4primelte-kor-open-r01.dtb
+                dtb-y += msm8917-sec-j4primelte-kor-open-r02.dtb
+                dtb-y += msm8917-sec-j4primelte-kor-open-r03.dtb
+                dtb-y += msm8917-sec-j4primelte-kor-open-r04.dtb
+                dtb-y += msm8917-sec-j4primelte-kor-open-r06.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J4CORELTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J4CORELTE_MEA_OPEN),y)
+                dtb-y += msm8917-sec-j4corelte-mea-open-r00.dtb
+                dtb-y += msm8917-sec-j4corelte-mea-open-r03.dtb
+				dtb-y += msm8917-sec-j4corelte-mea-open-r04.dtb
+				dtb-y += msm8917-sec-j4corelte-mea-open-r05.dtb
+        endif
+endif
+
+dtb-$(CONFIG_SEC_GTA2SLTE_PROJECT) += msm8917-sec-gta2slte-r00.dtb \
+					msm8917-sec-gta2slte-r01.dtb \
+					msm8917-sec-gta2slte-r02.dtb \
+					msm8917-sec-gta2slte-r03.dtb \
+					msm8917-sec-gta2slte-r05.dtb
+
+ifeq ($(filter y,$(CONFIG_MACH_GTA2SLTE_USA_ATT)),y)
+        dtb-y = msm8917-sec-gta2slte-usa-att-r00.dtb \
+                msm8917-sec-gta2slte-usa-att-r01.dtb \
+                msm8917-sec-gta2slte-usa-att-r02.dtb \
+                msm8917-sec-gta2slte-usa-att-r03.dtb \
+                msm8917-sec-gta2slte-usa-att-r05.dtb
+endif
+
+ifeq ($(filter y,$(CONFIG_MACH_GTA2SLTE_CHN_OPEN)),y)
+        dtb-y = msm8917-sec-gta2slte-chn-open-r03.dtb \
+                msm8917-sec-gta2slte-chn-open-r05.dtb
+endif
+
+ifeq ($(filter y,$(CONFIG_MACH_GTA2SLTE_CHN_ZH)),y)
+        dtb-y = msm8917-sec-gta2slte-chn-open-r03.dtb \
+                msm8917-sec-gta2slte-chn-open-r05.dtb
+endif
+
+dtb-$(CONFIG_SEC_GTA2SWIFI_PROJECT) += msm8917-sec-gta2swifi-r00.dtb \
+					msm8917-sec-gta2swifi-r01.dtb \
+					msm8917-sec-gta2swifi-r02.dtb \
+					msm8917-sec-gta2swifi-r03.dtb \
+					msm8917-sec-gta2swifi-r05.dtb
+
+ifeq ($(filter y,$(CONFIG_MACH_GTA2SWIFI_CHN_OPEN)),y)
+        dtb-y = msm8917-sec-gta2swifi-chn-open-r03.dtb \
+                msm8917-sec-gta2swifi-chn-open-r05.dtb
+endif
+
+dtb-$(CONFIG_SEC_GTESY18LTE_PROJECT) += msm8917-sec-gtesy18lte-r00.dtb \
+					msm8917-sec-gtesy18lte-r01.dtb \
+					msm8917-sec-gtesy18lte-r03.dtb
+
+ifeq ($(CONFIG_SEC_GTASLITELTE_PROJECT),y)
+		ifeq ($(CONFIG_MACH_GTASLITELTE_CAN_SINGLE),y)
+				dtb-y += msm8917-sec-gtaslitelte-can-single-r00.dtb
+				dtb-y += msm8917-sec-gtaslitelte-can-single-r01.dtb
+				dtb-y += msm8917-sec-gtaslitelte-can-single-r03.dtb
+		endif
+		
+		ifeq ($(CONFIG_MACH_GTASLITELTE_USA_VZW),y)
+				dtb-y += msm8917-sec-gtaslitelte-usa-vzw-r00.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-vzw-r01.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-vzw-r03.dtb
+		endif
+		
+		ifeq ($(CONFIG_MACH_GTASLITELTE_USA_SPR),y)
+				dtb-y += msm8917-sec-gtaslitelte-usa-spr-r00.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-spr-r01.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-spr-r03.dtb
+		endif
+		
+		ifeq ($(CONFIG_MACH_GTASLITELTE_USA_TMO),y)
+				dtb-y += msm8917-sec-gtaslitelte-usa-tmo-r00.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-tmo-r01.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-tmo-r03.dtb
+		endif
+		
+		ifeq ($(CONFIG_MACH_GTASLITELTE_USA_ATT),y)
+				dtb-y += msm8917-sec-gtaslitelte-usa-att-r00.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-att-r01.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-att-r03.dtb
+		endif
+		
+		ifeq ($(CONFIG_MACH_GTASLITELTE_USA_USC),y)
+				dtb-y += msm8917-sec-gtaslitelte-usa-usc-r00.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-usc-r01.dtb
+				dtb-y += msm8917-sec-gtaslitelte-usa-usc-r03.dtb
+		endif
+endif
+
+ifeq ($(CONFIG_SEC_ON5XLLTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_ON5XLLTE_CHN_OPEN),y)
+                dtb-y += msm8917-sec-on5xllte-chn-r00.dtb
+                dtb-y += msm8917-sec-on5xllte-chn-r01.dtb
+                dtb-y += msm8917-sec-on5xllte-chn-r02.dtb
+                dtb-y += msm8917-sec-on5xllte-chn-r03.dtb
+        endif
+
+        ifeq ($(CONFIG_MACH_ON5XFLTE_CHN_OPEN),y)
+                dtb-y += msm8917-sec-on5xflte-chn-r00.dtb
+                dtb-y += msm8917-sec-on5xflte-chn-r01.dtb
+                dtb-y += msm8917-sec-on5xflte-chn-r02.dtb
+		dtb-y += msm8917-sec-on5xflte-chn-r03.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J3Y17QLTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J3Y17QLTE_CHN_CMCC),y)
+                dtb-y += msm8917-sec-j3y17qlte-chn-r00.dtb
+				dtb-y += msm8917-sec-j3y17qlte-chn-r01.dtb
+				dtb-y += msm8917-sec-j3y17qlte-chn-r02.dtb
+				dtb-y += msm8917-sec-j3y17qlte-chn-r03.dtb
+        endif
+		ifeq ($(CONFIG_MACH_J3Y17QLTE_SWA_OPEN),y)
+                dtb-y += msm8917-sec-j3y17qlte-swa-r00.dtb
+        endif
+endif
+
+ifeq ($(CONFIG_SEC_J2ESSLTE_PROJECT),y)
+        ifeq ($(CONFIG_MACH_J2ESSLTE_SWA_INS),y)
+                dtb-y += msm8917-sec-j2esslte-swa-ins-r00.dtb
+        endif
+endif
+
+echo '*** Warning: Samsung $@ Device Tree MSM8917.'
+DTB_NAMES := $(subst $\",,$(CONFIG_BUILD_ARM_APPENDED_DTB_IMAGE_NAMES))
+ifneq ($(DTB_NAMES),)
+DTB_LIST := $(addsuffix .dtb,$(DTB_NAMES))
+else
+DTB_LIST := $(dtb-y)
+endif
+
+targets += dtbs
+targets += $(addprefix ../, $(DTB_LIST))
+endif
+
+$(obj)/../../%.dtb: $(src)/%.dts FORCE
+	$(call if_changed_dep,dtc)
+
+dtbs: $(addprefix $(obj)/../../,$(DTB_LIST))
+
+clean-files := *.dtb *.reverse.dts
+
+
