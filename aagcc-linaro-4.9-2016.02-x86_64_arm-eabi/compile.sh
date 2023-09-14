@@ -6,5 +6,5 @@ mkdir -p out
 make O=out clean
 make O=out mrproper
 make O=out j4primelte_defconfig
-make O=out -j4
+make O=out -j12
 
